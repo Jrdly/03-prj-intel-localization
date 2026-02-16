@@ -1,191 +1,350 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="auto">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Intel: Sustainability Through the Ages</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600&family=Space+Grotesk:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    id="bootstrap-css"
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+  />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- Header / Hero Section -->
-  <header>
-    <div>
-      <img src="img/intel-header-logo.svg" alt="Intel Logo" />
-      <!-- Main Heading -->
-      <h1>
-        Sustainability Through the Ages
-      </h1>
-
-      <!-- Subheading / Description -->
-      <p>
-        Explore Intel's journey through time, discovering how our commitment
-        to innovation has shaped a more sustainable future for technology 
-        and our planet.
-      </p>
+  <header class="hero py-5">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <img class="hero-logo" src="img/intel-header-logo.svg" alt="Intel Logo" />
+          <h1 class="display-4">Sustainability Through the Ages</h1>
+          <p class="lead text-muted">
+            Explore Intel's journey through time, discovering how our commitment
+            to innovation has shaped a more sustainable future for technology
+            and our planet.
+          </p>
+          <div class="d-flex gap-2 flex-wrap">
+            <a class="btn btn-primary" href="#timeline">Explore timeline</a>
+            <a class="btn btn-outline-light" href="#initiatives">Learn more</a>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="hero-card">
+            <p class="eyebrow">Highlight</p>
+            <h2 class="h4">99% renewable electricity</h2>
+            <p class="text-muted">
+              2023 marked a major milestone in Intel's global energy transition.
+            </p>
+            <div class="hero-stats">
+              <div>
+                <span>2023</span>
+                <small>Milestone year</small>
+              </div>
+              <div>
+                <span>2040</span>
+                <small>Net-zero target</small>
+              </div>
+              <div>
+                <span>RISE</span>
+                <small>2030 goals</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
   <!-- Timeline Cards Section -->
-  <section>
-    <!-- Card 1: 1968 -->
-    <div>
-      <h2>1968</h2>
-      <h3>Intel Founded</h3>
-      <img src="img/1.jpg" alt="Placeholder Image" />
-      <p>
-        Robert Noyce and Gordon Moore rename the newly formed company 
-        NM Electronics to Intel Corporation, laying the foundation for 
-        decades of technological innovation.
-      </p>
-    </div>
+  <section id="timeline" class="timeline-section py-5">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-4">
+        <div>
+          <p class="eyebrow">1968 - 2024</p>
+          <h2 class="display-6">A timeline you can scroll</h2>
+          <p class="text-muted mb-0">
+            Use the arrows or swipe to move through four stories at a time.
+          </p>
+        </div>
+      </div>
 
-    <!-- Card 2: 1971 -->
-    <div>
-      <h2>1971</h2>
-      <h3>First Microprocessor</h3>
-      <img src="img/2.jpg" alt="Placeholder Image" />
-      <p>
-        Intel debuts the 4004, the world's first commercial microprocessor, 
-        igniting the microprocessor revolution and propelling the future 
-        of computing devices.
-      </p>
-    </div>
+      <div class="timeline-wrap">
+        <button class="timeline-arrow left" type="button" data-direction="prev" aria-label="Scroll timeline left">
+          <span aria-hidden="true">&larr;</span>
+        </button>
+        <button class="timeline-arrow right" type="button" data-direction="next" aria-label="Scroll timeline right">
+          <span aria-hidden="true">&rarr;</span>
+        </button>
+        <div id="timeline-scroll" class="timeline-scroll" tabindex="0" aria-label="Intel sustainability timeline">
+        <article class="timeline-card">
+          <div class="card-year">1968</div>
+          <h3 class="h5">Intel Founded</h3>
+          <div class="timeline-media" tabindex="0">
+            <img src="img/1.jpg" alt="Historic Intel building" />
+            <p class="timeline-desc">
+              Robert Noyce and Gordon Moore rename the newly formed company
+              NM Electronics to Intel Corporation, laying the foundation for
+              decades of technological innovation.
+            </p>
+          </div>
+        </article>
 
-    <!-- Card 3: 1978 -->
-    <div>
-      <h2>1978</h2>
-      <h3>8086 Processor</h3>
-      <img src="img/3.jpg" alt="Placeholder Image" />
-      <p>
-        Launch of the 8086 processor, establishing the x86 architecture 
-        that drives countless PCs and servers in the modern era.
-      </p>
-    </div>
+        <article class="timeline-card">
+          <div class="card-year">1971</div>
+          <h3 class="h5">First Microprocessor</h3>
+          <div class="timeline-media" tabindex="0">
+            <img src="img/2.jpg" alt="Microprocessor closeup" />
+            <p class="timeline-desc">
+              Intel debuts the 4004, the world's first commercial microprocessor,
+              igniting the microprocessor revolution and propelling the future
+              of computing devices.
+            </p>
+          </div>
+        </article>
 
-    <!-- Card 4: 1985 -->
-    <div>
-      <h2>1985</h2>
-      <h3>386 Processor</h3>
-      <img src="img/4.jpg" alt="Placeholder Image" />
-      <p>
-        Intel introduces the 386 processor with 32-bit architecture, 
-        ushering in a new era of performance and multitasking for 
-        personal computers.
-      </p>
-    </div>
+        <article class="timeline-card">
+          <div class="card-year">1978</div>
+          <h3 class="h5">8086 Processor</h3>
+          <div class="timeline-media" tabindex="0">
+            <img src="img/3.jpg" alt="Vintage processor diagram" />
+            <p class="timeline-desc">
+              Launch of the 8086 processor, establishing the x86 architecture
+              that drives countless PCs and servers in the modern era.
+            </p>
+          </div>
+        </article>
 
-    <!-- Card 5: 2006 -->
-    <div>
-      <h2>2006</h2>
-      <h3>Peak GHG Emissions</h3>
-      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
-      <p>
-        This year marks Intel's highest annual greenhouse gas emissions 
-        for operations. Over subsequent years, Intel invests heavily in 
-        chemical abatement, renewable energy, and energy-efficient 
-        manufacturing to reverse this trend.
-      </p>
-    </div>
+        <article class="timeline-card">
+          <div class="card-year">1985</div>
+          <h3 class="h5">386 Processor</h3>
+          <div class="timeline-media" tabindex="0">
+            <img src="img/4.jpg" alt="Early personal computer" />
+            <p class="timeline-desc">
+              Intel introduces the 386 processor with 32-bit architecture,
+              ushering in a new era of performance and multitasking for
+              personal computers.
+            </p>
+          </div>
+        </article>
 
-    <!-- Card 6: 2020 -->
-    <div>
-      <h2>2020</h2>
-      <h3>RISE Strategy</h3>
-      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
-      <p>
-        Intel launches its RISE (Responsible, Inclusive, Sustainable, 
-        Enabling) strategy and 2030 goals, aiming to drive industry-wide 
-        progress on climate action, water stewardship, and waste reduction.
-      </p>
-    </div>
+        <article class="timeline-card">
+          <div class="card-year">2006</div>
+          <h3 class="h5">Peak GHG Emissions</h3>
+          <div class="timeline-media" tabindex="0">
+            <img src="img/2006-ghg.svg" alt="Factory emissions illustration" loading="lazy" />
+            <p class="timeline-desc">
+              This year marks Intel's highest annual greenhouse gas emissions
+              for operations. Over subsequent years, Intel invests heavily in
+              chemical abatement, renewable energy, and energy-efficient
+              manufacturing to reverse this trend.
+            </p>
+          </div>
+        </article>
 
-    <!-- Card 7: 2022 -->
-    <div>
-      <h2>2022</h2>
-      <h3>Net-Zero By 2040</h3>
-      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
-      <p>
-        Intel announces its commitment to achieve net-zero greenhouse 
-        gas emissions (Scope 1 and 2) across its global operations 
-        by 2040, building on years of environmental initiatives.
-      </p>
-    </div>
+        <article class="timeline-card">
+          <div class="card-year">2020</div>
+          <h3 class="h5">RISE Strategy</h3>
+          <div class="timeline-media" tabindex="0">
+            <img src="img/2020-rise.svg" alt="RISE strategy illustration" loading="lazy" />
+            <p class="timeline-desc">
+              Intel launches its RISE (Responsible, Inclusive, Sustainable,
+              Enabling) strategy and 2030 goals, aiming to drive industry-wide
+              progress on climate action, water stewardship, and waste reduction.
+            </p>
+          </div>
+        </article>
 
-    <!-- Card 8: 2023 -->
-    <div>
-      <h2>2023</h2>
-      <h3>Renewable Electricity</h3>
-      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
-      <p>
-        The company achieves 99% renewable electricity usage worldwide, 
-        helping to drastically lower carbon emissions and driving progress 
-        toward Intel's long-term sustainability goals.
-      </p>
-    </div>
+        <article class="timeline-card">
+          <div class="card-year">2022</div>
+          <h3 class="h5">Net-Zero By 2040</h3>
+          <div class="timeline-media" tabindex="0">
+            <img src="img/2022-netzero.svg" alt="Net-zero target illustration" loading="lazy" />
+            <p class="timeline-desc">
+              Intel announces its commitment to achieve net-zero greenhouse
+              gas emissions (Scope 1 and 2) across its global operations
+              by 2040, building on years of environmental initiatives.
+            </p>
+          </div>
+        </article>
 
-    <!-- Card 9: 2024 -->
-    <div>
-      <h2>2024</h2>
-      <h3>Sustainability Summit</h3>
-      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
-      <p>
-        Intel hosts its first Sustainability Summit, uniting suppliers, 
-        government officials, and industry leaders to collaborate on 
-        next-generation sustainable semiconductor manufacturing.
-      </p>
+        <article class="timeline-card">
+          <div class="card-year">2023</div>
+          <h3 class="h5">Renewable Electricity</h3>
+          <div class="timeline-media" tabindex="0">
+            <img src="img/2023-renewable.svg" alt="Renewable energy illustration" loading="lazy" />
+            <p class="timeline-desc">
+              The company achieves 99% renewable electricity usage worldwide,
+              helping to drastically lower carbon emissions and driving progress
+              toward Intel's long-term sustainability goals.
+            </p>
+          </div>
+        </article>
+
+        <article class="timeline-card">
+          <div class="card-year">2024</div>
+          <h3 class="h5">Sustainability Summit</h3>
+          <div class="timeline-media" tabindex="0">
+            <img src="img/2024-summit.svg" alt="Sustainability summit illustration" loading="lazy" />
+            <p class="timeline-desc">
+              Intel hosts its first Sustainability Summit, uniting suppliers,
+              government officials, and industry leaders to collaborate on
+              next-generation sustainable semiconductor manufacturing.
+            </p>
+          </div>
+        </article>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- 3-Column Content Section -->
-  <section>
-    <div>
-      
-      <!-- Column 1 -->
-      <div>
-        <h2>RISE Strategy</h2>
-        <p>
-          Under its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy, 
-          Intel sets ambitious 2030 goals, including driving industry-wide 
-          progress on climate action, water stewardship, and waste reduction.
-        </p>
-        <!-- Learn More Button -->
-        <a href="#">Learn More</a>
-      </div>
+  <section id="initiatives" class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="feature-card h-100">
+            <h2 class="h4">RISE Strategy</h2>
+            <p>
+              Under its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy,
+              Intel sets ambitious 2030 goals, including driving industry-wide
+              progress on climate action, water stewardship, and waste reduction.
+            </p>
+            <a class="btn btn-link" href="#">Learn More</a>
+          </div>
+        </div>
 
-      <!-- Column 2 -->
-      <div>
-        <h2>Commitment</h2>
-        <p>
-          In 2022, Intel pledged to achieve net-zero greenhouse gas emissions 
-          (Scope 1 and 2) by 2040. This commitment builds on decades of 
-          environmental initiatives and partnerships across the semiconductor 
-          industry.
-        </p>
-        <!-- Learn More Button -->
-        <a href="#">Learn More</a>
-      </div>
+        <div class="col-md-4">
+          <div class="feature-card h-100">
+            <h2 class="h4">Commitment</h2>
+            <p>
+              In 2022, Intel pledged to achieve net-zero greenhouse gas emissions
+              (Scope 1 and 2) by 2040. This commitment builds on decades of
+              environmental initiatives and partnerships across the semiconductor
+              industry.
+            </p>
+            <a class="btn btn-link" href="#">Learn More</a>
+          </div>
+        </div>
 
-      <!-- Column 3 -->
-      <div>
-        <h2>Water &amp; Waste</h2>
-        <p>
-          Intel conserves billions of gallons of water annually and 
-          collaborates with local communities to restore watersheds.
-          Intel also upcycles and recycles materials to reduce waste and 
-          advance a circular economy.
-        </p>
-        <!-- Learn More Button -->
-        <a href="#">Learn More</a>
+        <div class="col-md-4">
+          <div class="feature-card h-100">
+            <h2 class="h4">Water &amp; Waste</h2>
+            <p>
+              Intel conserves billions of gallons of water annually and
+              collaborates with local communities to restore watersheds.
+              Intel also upcycles and recycles materials to reduce waste and
+              advance a circular economy.
+            </p>
+            <a class="btn btn-link" href="#">Learn More</a>
+          </div>
+        </div>
       </div>
-
     </div>
   </section>
 
   <!-- Subscription Form -->
-  <section>
-    <h2>Subscribe to our Newsletter</h2>
-    <!-- Add form here -->
+  <section class="py-5 newsletter">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <h2 class="display-6">Subscribe to our Newsletter</h2>
+          <p class="text-muted">
+            Monthly stories on climate progress, manufacturing innovation, and
+            responsible technology leadership.
+          </p>
+        </div>
+        <div class="col-lg-6">
+          <form class="row g-2">
+            <div class="col-md-7">
+              <label class="visually-hidden" for="newsletter-email">Email</label>
+              <input
+                id="newsletter-email"
+                type="email"
+                class="form-control"
+                placeholder="you@company.com"
+                required
+              />
+            </div>
+            <div class="col-md-5">
+              <button type="submit" class="btn btn-primary w-100">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </section>
+
+  <script>
+    const timeline = document.getElementById('timeline-scroll');
+    const controls = document.querySelectorAll('.timeline-arrow');
+    const bootstrapLink = document.getElementById('bootstrap-css');
+    const ltrCss = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css';
+    const rtlCss = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css';
+
+    const getDirection = () => {
+      return getComputedStyle(document.documentElement).direction || 'ltr';
+    };
+
+    let currentDir = getDirection();
+
+    const syncBootstrap = () => {
+      const dir = getDirection();
+      if (dir === currentDir) {
+        return;
+      }
+      currentDir = dir;
+      bootstrapLink.href = dir === 'rtl' ? rtlCss : ltrCss;
+    };
+
+    bootstrapLink.href = currentDir === 'rtl' ? rtlCss : ltrCss;
+
+    const observer = new MutationObserver(() => {
+      syncBootstrap();
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      childList: true,
+      subtree: true,
+      characterData: true
+    });
+
+    setInterval(syncBootstrap, 1000);
+
+    controls.forEach((button) => {
+      button.addEventListener('click', () => {
+        const direction = button.dataset.direction === 'next' ? 1 : -1;
+        const rtlFactor = getDirection() === 'rtl' ? -1 : 1;
+        const card = timeline.querySelector('.timeline-card');
+        if (!card) {
+          return;
+        }
+        const gap = parseFloat(getComputedStyle(timeline).gap) || 0;
+        const scrollAmount = card.offsetWidth + gap;
+        timeline.scrollBy({ left: direction * rtlFactor * scrollAmount, behavior: 'smooth' });
+      });
+    });
+
+    timeline.addEventListener('keydown', (event) => {
+      if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') {
+        return;
+      }
+      event.preventDefault();
+      const direction = event.key === 'ArrowRight' ? 1 : -1;
+      const rtlFactor = getDirection() === 'rtl' ? -1 : 1;
+      const card = timeline.querySelector('.timeline-card');
+      const gap = parseFloat(getComputedStyle(timeline).gap) || 0;
+      const scrollAmount = (card ? card.offsetWidth : 320) + gap;
+      timeline.scrollBy({ left: direction * rtlFactor * scrollAmount, behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>
